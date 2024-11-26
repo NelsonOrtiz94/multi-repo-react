@@ -11,13 +11,20 @@ import { WinnerModal } from "./components/WinnerModal";
 function App() {
   const [board, setBoard] = useState(() => {
     const boardFromStorage = window.localStorage.getItem("board");
-    if (boardFromStorage )return JSON.parse(boardFromStorage)
-      return Array(9).fill(null);
+    try {
+      const parsedBoard = JSON.parse(boardFromStorage);
+      if (Array.isArray(parsedBoard) && parsedBoard.length === 9) {
+        return parsedBoard;
+      }
+    } catch (error) {
+      console.warn("Error parsing board from localStorage:", error);
+    }
+    return Array(9).fill(null);
   });
 
   const [turn, setTurn] = useState(() => {
     const turnFromStorage = window.localStorage.getItem("turn");
-    return turnFromStorage ?? TURNS.X
+    return turnFromStorage ?? TURNS.X;
   });
   const [winner, setWinner] = useState(null); // null = no hay ganador, false = empate
 
@@ -30,25 +37,23 @@ function App() {
   };
 
   const updateboard = (index) => {
-    // si ya hay un valor en el tablero o ya hay un ganador, no hacer nada
     if (board[index] || winner) return;
-    // actualizar el tablero
     const newBoard = [...board];
     newBoard[index] = turn;
     setBoard(newBoard);
-    //cambiar el turno
+
     const newTurn = turn === TURNS.X ? TURNS.O : TURNS.X;
     setTurn(newTurn);
-    // guardar partida
+
     window.localStorage.setItem("board", JSON.stringify(newBoard));
     window.localStorage.setItem("turn", newTurn);
-    //revisar si hay un ganador
+
     const newWinner = checkWinnerFrom(newBoard);
     if (newWinner) {
-      confetti(); //Lanza los confettis
-      setWinner(newWinner); //Actualiza el estado del ganador
+      confetti();
+      setWinner(newWinner);
     } else if (checkEndGame(newBoard)) {
-      setWinner(false); //Empate
+      setWinner(false);
     }
   };
 
@@ -57,13 +62,14 @@ function App() {
       <h1>Triqui ó Tic Tac Toe</h1>
       <button onClick={resetGame}>Reset</button>
       <section className="game">
-        {board.map((_, index) => {
-          return (
-            <Square key={index} index={index} updateboard={updateboard}>
-              {board[index]}
-            </Square>
-          );
-        })}
+        {Array.isArray(board) &&
+          board.map((_, index) => {
+            return (
+              <Square key={index} index={index} updateboard={updateboard}>
+                {board[index]}
+              </Square>
+            );
+          })}
       </section>
 
       <section className="turn">
