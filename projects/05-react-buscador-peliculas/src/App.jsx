@@ -5,7 +5,7 @@ function App() {
     <div className="page">
 
       <header>
-        <h1>Movie search</h1>
+        <h1>Movie <span className="text-warning">search</span></h1>
         <form className="form">
           <input placeholder="Movie name" />
           <button type="submit">Search</button>

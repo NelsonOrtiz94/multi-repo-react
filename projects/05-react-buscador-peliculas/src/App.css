@@ -18,6 +18,10 @@
     display: flex;
     justify-content: center;
   }
+
+  .text-warning {
+    color: rgb(255, 136, 0);
+  }
   
   .movies {
     list-style: none;
