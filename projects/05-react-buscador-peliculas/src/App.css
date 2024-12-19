@@ -28,9 +28,9 @@
     margin: 0;
     padding: 0;
   
-    display: flex;
+    display: grid;
     flex-direction: column-reverse;
-    /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
    
     width: 100%;
     gap: 32px;
