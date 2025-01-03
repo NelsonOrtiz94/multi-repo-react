@@ -1,10 +1,8 @@
-import {products} from "./mocks/products.json"
-import { Products } from "./components/Products"
+import { products } from "./mocks/products.json";
+import { Products } from "./components/Products.jsx";
 
 function App() {
-  return (
-      <Products products={products} />
-  )
+  return <Products products={products} />;
 }
 
-export default App
+export default App;
