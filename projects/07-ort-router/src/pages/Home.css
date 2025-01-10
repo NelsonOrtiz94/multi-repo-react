@@ -40,6 +40,13 @@ body {
     color: black;
     margin-top: 10%;
   }
+
+  .content a {
+    text-decoration: none;
+    color: yellow;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
   
   .home {
     color: black;
