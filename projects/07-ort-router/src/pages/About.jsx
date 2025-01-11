@@ -35,7 +35,7 @@ export default function AboutPage({ routeParams }) {
           />
           <p>{i18n.description}</p>
         </div>
-        <Link to="/">{i18n.button}</Link>
+        <Link to="/" className="home-link">{i18n.button}</Link>
       </div>
     </div>
   );

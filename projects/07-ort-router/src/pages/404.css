@@ -1,0 +1,32 @@
+.page404 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background-color: #f7f7f7;
+    color: #333;
+    font-family: Arial, sans-serif;
+  }
+  
+  .page404 img {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+  }
+  
+  .home-link {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .home-link:hover {
+    background-color: #0056b3;
+  }
+  

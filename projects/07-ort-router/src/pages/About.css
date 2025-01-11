@@ -51,8 +51,22 @@
   
   .content-2 a {
     text-decoration: none;
-    color: yellow;
+    color: white;
     font-size: 1.2rem;
     font-weight: bold;
+  }
+
+  .home-link {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .home-link:hover {
+    background-color: #0056b3;
   }
   

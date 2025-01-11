@@ -8,7 +8,7 @@ export default function HomePage() {
       <div className="content">
         <h1 className="home">HOME</h1>
         <p>Esta es una página base para crear un React Router desde cero</p>
-        <Link to="/about">Ir a Sobre nosotros</Link>
+        <Link to="/about" className="home-link">Ir a Sobre nosotros</Link>
       </div>
     </div>
   );
