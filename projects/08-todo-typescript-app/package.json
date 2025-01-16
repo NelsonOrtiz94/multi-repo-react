@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "08-todo-typescript-app": "file:",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "todomvc-app-css": "^2.4.3"
