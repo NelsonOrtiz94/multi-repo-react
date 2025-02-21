@@ -1,50 +1,18 @@
-# React + TypeScript + Vite
+# Prueba técnica con TypeScript y React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Esto es una prueba técnica de una empresa europea para un sueldo de 55000 €/anuales.
 
-Currently, two official plugins are available:
+El objetivo de esta prueba técnica es crear una aplicación similar a la que se proporciona en este enlace: https://midu-react-11.surge.sh/. Para lograr esto, debe usar la API proporcionada por https://randomuser.me/.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Los pasos a seguir:
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- [x] Fetch 100 rows of data using the API.
+- [x] Display the data in a table format, similar to the example.
+- [x] Provide the option to color rows as shown in the example.
+- [x] Allow the data to be sorted by country as demonstrated in the example.
+- [x] Enable the ability to delete a row as shown in the example.
+- [x] Implement a feature that allows the user to restore the initial state, meaning that all deleted rows will be recovered.
+- [x] Handle any potential errors that may occur.
+- [x] Implement a feature that allows the user to filter the data by country.
+- [x] Avoid sorting users again the data when the user is changing filter by country.
+- [x] Sort by clicking on the column header.
