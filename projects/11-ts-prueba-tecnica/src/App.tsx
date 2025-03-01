@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import './App.css'
 import { UsersList } from './components/UsersList'
-import { SortBy, type User } from './types.d'
+import { SortBy, type User } from '../../11-ts-prueba-tecnica/src/types.d'
 
 function App () {
   const [users, setUsers] = useState<User[]>([])

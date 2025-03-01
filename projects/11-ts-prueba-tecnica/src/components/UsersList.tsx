@@ -1,4 +1,4 @@
-import { SortBy, type User } from '../types'
+import { SortBy, type User } from '../types.d'
 
 interface Props {
   changeSorting: (sort: SortBy) => void
